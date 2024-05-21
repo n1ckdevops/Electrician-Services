@@ -1,3 +1,3 @@
-import check from "./modules/check";
+import modal from "./modules/modal";
 
-check();
+modal();

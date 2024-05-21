@@ -16,17 +16,17 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_check__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/check */ \"./modules/check.js\");\n\r\n\r\n(0,_modules_check__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n\r\n\r\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
-/***/ "./modules/check.js":
+/***/ "./modules/modal.js":
 /*!**************************!*\
-  !*** ./modules/check.js ***!
+  !*** ./modules/modal.js ***!
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst check = () => {\r\n  const check = \"check\";\r\n\r\n  console.log(check);\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (check);\r\n\n\n//# sourceURL=webpack:///./modules/check.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst modal = () => {\r\n  const modal = document.querySelector(\".modal-callback\");\r\n  const modalOverlay = document.querySelector(\".modal-overlay\");\r\n  const modalClose = document.querySelector(\".modal-close\");\r\n  const button = document.querySelector(\".callback-btn\");\r\n\r\n  document.addEventListener(\"click\", (e) => {\r\n    if (e.target.matches(\".callback-btn\")) {\r\n      modal.style.display = \"block\";\r\n      modalOverlay.style.display = \"block\";\r\n    }\r\n  });\r\n  document.addEventListener(\"click\", (e) => {\r\n    if (\r\n      e.target.matches(\".modal-overlay\") ||\r\n      e.target.matches(\".modal-close\")\r\n    ) {\r\n      modal.style.display = \"none\";\r\n      modalOverlay.style.display = \"none\";\r\n    }\r\n  });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);\r\n\n\n//# sourceURL=webpack:///./modules/modal.js?");
 
 /***/ })
 

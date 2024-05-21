@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <!-- PAGE TITLE -->
@@ -15,7 +15,6 @@
     <meta name="author" content="Команда разработчиков collary.ru" />
     <meta name="copyright" content="© collary.ru, дизайн и разработка, 2018" />
     <link rel="icon" type="image/png" href="favicon.png" />
-    <script src="./js/main.js"></script>
 
     <!-- STYLESHEETS :: FONTS -->
     <link
@@ -29,6 +28,7 @@
     />
     <!-- STYLESHEETS :: TEMPLATE -->
     <link href="css/style.css" rel="stylesheet" />
+    <script src="./js/main.js" defer></script>
   </head>
 
   <body>
@@ -668,7 +668,11 @@
     <!-- * * * * * * Callback modal block * * * * * * -->
     <div class="modal-callback" id="callback">
       <div class="modal-close">
-        <img src="images/close_icon_green.svg" alt="modal-close" />
+        <img
+          src="images/close_icon_green.svg"
+          class="modal-close"
+          alt="modal-close"
+        />
       </div>
       <div class="title-h2">Мы перезвоним через 5 минут!</div>
       <br />
