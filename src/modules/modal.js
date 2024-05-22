@@ -3,9 +3,9 @@ import { animate } from "./helpers";
 const modal = () => {
   const modal = document.querySelector(".modal-callback");
   const modalOverlay = document.querySelector(".modal-overlay");
-  // const modalClose = document.querySelector(".modal-close");
   const buttons = document.querySelectorAll(".callback-btn");
 
+  // Плавное анимирование
   const animateModal = () => {
     animate({
       duration: 500,
@@ -19,13 +19,16 @@ const modal = () => {
     });
   };
 
-  document.addEventListener("click", (e) => {
-    if (e.target.matches(".callback-btn")) {
+  // Открытие модального окна
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
       modal.style.display = "block";
       modalOverlay.style.display = "block";
       animateModal();
-    }
+    });
   });
+
+  // Закрытие модального окна
   document.addEventListener("click", (e) => {
     if (
       e.target.matches(".modal-overlay") ||
