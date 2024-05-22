@@ -16,7 +16,7 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scroll */ \"./modules/scroll.js\");\n\r\n\r\n\r\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n(0,_modules_scroll__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_scroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scroll */ \"./modules/scroll.js\");\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/slider */ \"./modules/slider.js\");\n/* harmony import */ var _modules_sendForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/sendForm */ \"./modules/sendForm.js\");\n/* harmony import */ var _modules_validation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/validation */ \"./modules/validation.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n(0,_modules_scroll__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n(0,_modules_sendForm__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n(0,_modules_validation__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -46,7 +46,37 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst scroll = () => {\r\n  const links = document.querySelectorAll(\"ul li a\");\r\n  // #contacts/#faq/#services\r\n\r\n  const scrollTo = (targetId) => {\r\n    const section = document.getElementById(targetId);\r\n    if (section) {\r\n      section.scrollIntoView({ behavior: \"smooth\" });\r\n    }\r\n  };\r\n\r\n  links.forEach((link) => {\r\n    link.addEventListener(\"click\", (e) => {\r\n      e.preventDefault();\r\n      // console.log(\"Работает!\");\r\n      const targetId = link.getAttribute(\"href\").substring(1);\r\n      scrollTo(targetId);\r\n    });\r\n  });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scroll);\r\n\n\n//# sourceURL=webpack:///./modules/scroll.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst scroll = () => {\r\n  const links = document.querySelectorAll(\"ul li a\");\r\n\r\n  const scrollTo = (targetId) => {\r\n    const section = document.getElementById(targetId);\r\n    if (section) {\r\n      section.scrollIntoView({ behavior: \"smooth\" });\r\n    }\r\n  };\r\n\r\n  links.forEach((link) => {\r\n    link.addEventListener(\"click\", (e) => {\r\n      e.preventDefault();\r\n      const targetId = link.getAttribute(\"href\").substring(1);\r\n      scrollTo(targetId);\r\n    });\r\n  });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scroll);\r\n\n\n//# sourceURL=webpack:///./modules/scroll.js?");
+
+/***/ }),
+
+/***/ "./modules/sendForm.js":
+/*!*****************************!*\
+  !*** ./modules/sendForm.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst sendForm = () => {\r\n  console.log(\"form!\");\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sendForm);\r\n\n\n//# sourceURL=webpack:///./modules/sendForm.js?");
+
+/***/ }),
+
+/***/ "./modules/slider.js":
+/*!***************************!*\
+  !*** ./modules/slider.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst slider = () => {\r\n  // const imgSlider = document.querySelectorAll(\".item.relative\");\r\n  // const slider = document.querySelector(\".top-slider\");\r\n  // console.log(imgSlider);\r\n  // console.log(slider);\r\n  // imgSlider.forEach((slider) => {\r\n  //   slider.addEventListener(\"click\", () => {});\r\n  // });\r\n  //\r\n  //   const slider = document.querySelector(\".top-slider\");\r\n  //   const slides = slider.querySelectorAll(\".item\");\r\n  //   let currentSlide = 0;\r\n  //   setInterval(() => {\r\n  //     slides[currentSlide].classList.remove(\"active\");\r\n  //     currentSlide = (currentSlide + 1) % slides.length;\r\n  //     slides[currentSlide].classList.add(\"active\");\r\n  //   }, 5000);\r\n  document.addEventListener(\"click\", (e) => {\r\n    console.log(e.target);\r\n  });\r\n\r\n  document.addEventListener(\"DOMContentLoaded\", function () {\r\n    const slider = document.querySelector(\".top-slider\");\r\n    const slides = slider.querySelectorAll(\".item\");\r\n    let currentSlide = 0;\r\n\r\n    setInterval(() => {\r\n      slides[currentSlide].classList.remove(\"active\");\r\n      currentSlide = (currentSlide + 1) % slides.length;\r\n      slides[currentSlide].classList.add(\"active\");\r\n    }, 1000); // Интервал переключения в миллисекундах (здесь 5000 = 5 секунд)\r\n  });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\r\n\n\n//# sourceURL=webpack:///./modules/slider.js?");
+
+/***/ }),
+
+/***/ "./modules/validation.js":
+/*!*******************************!*\
+  !*** ./modules/validation.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst validation = () => {\r\n  const users = document.querySelectorAll('[name=\"fio\"]');\r\n  const phones = document.querySelectorAll('[name=\"tel\"]');\r\n  console.log(phones);\r\n  users.forEach((user) => {\r\n    user.addEventListener(\"input\", (e) => {\r\n      e.target.value = e.target.value.replace(/[^а-яА-ЯёЁ]+/, \"\");\r\n    });\r\n  });\r\n  phones.forEach((phone) => {\r\n    phone.addEventListener(\"input\", (e) => {\r\n      e.target.value = e.target.value.replace(/[^0-9\\+]+/, \"\");\r\n    });\r\n  });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (validation);\r\n\n\n//# sourceURL=webpack:///./modules/validation.js?");
 
 /***/ })
 
