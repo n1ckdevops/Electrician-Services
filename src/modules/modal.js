@@ -4,7 +4,10 @@ const modal = () => {
   const modal = document.querySelector(".modal-callback");
   const modalOverlay = document.querySelector(".modal-overlay");
   const buttons = document.querySelectorAll(".callback-btn");
+  const btnServices = document.querySelector(".button-services");
+  const fancy = document.querySelectorAll(".fancyboxModal");
 
+  console.log(fancy);
   // Плавное анимирование
   const animateModal = () => {
     animate({
@@ -26,6 +29,13 @@ const modal = () => {
       modalOverlay.style.display = "block";
       animateModal();
     });
+  });
+  // Открытие модального окна на "Не нашли нужной услуги?"
+  btnServices.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalOverlay.style.display = "block";
+
+    animateModal();
   });
 
   // Закрытие модального окна
