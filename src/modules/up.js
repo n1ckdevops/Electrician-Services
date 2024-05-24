@@ -2,6 +2,7 @@ const up = () => {
   const arrowUp = document.querySelector(".up");
   const secondSection = document.querySelector(".services-section");
 
+  arrowUp.style.display = "none";
   // делаем скроллинг
   window.addEventListener("scroll", () => {
     // топ второй секции
