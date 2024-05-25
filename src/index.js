@@ -5,11 +5,13 @@ import sendForm from "./modules/sendForm";
 import validation from "./modules/validation";
 import up from "./modules/up";
 import accordeon from "./modules/accordeon";
+import mask from "./modules/mask";
 
 modal();
 scroll();
 slider();
-sendForm();
 validation();
 up();
 accordeon();
+sendForm();
+mask();

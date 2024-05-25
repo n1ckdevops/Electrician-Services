@@ -7,7 +7,6 @@ const modal = () => {
   const btnServices = document.querySelector(".button-services");
   const fancy = document.querySelectorAll(".fancyboxModal");
 
-  console.log(fancy);
   // Плавное анимирование
   const animateModal = () => {
     animate({
