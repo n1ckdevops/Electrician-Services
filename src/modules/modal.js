@@ -36,7 +36,13 @@ const modal = () => {
 
     animateModal();
   });
-
+  fancy.forEach((elem) => {
+    elem.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalOverlay.style.display = "block";
+      animateModal();
+    });
+  });
   // Закрытие модального окна
   document.addEventListener("click", (e) => {
     if (
