@@ -1,20 +1,14 @@
 import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
 
 const corusel = () => {
-  console.log("hey");
-  document.addEventListener("click", (e) => {
-    console.log(e.target);
-  });
-
   const swiper = new Swiper(".swiper", {
-    // Optional parameters
+    modules: [Navigation],
     slidesPerView: 3,
     loop: true,
-
-    // Navigation arrows
     navigation: {
-      prevEl: ".swiper-button-prev",
-      nextEl: ".swiper-button-next",
+      prevEl: ".arrow-left",
+      nextEl: ".arrow-right",
     },
   });
 };
