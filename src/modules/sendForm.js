@@ -42,11 +42,6 @@ const sendForm = () => {
         setTimeout(() => {
           statusBlock.remove();
         }, 2000);
-
-        setTimeout(() => {
-          modal.style.display = "none";
-          modalOverlay.style.display = "none";
-        }, 3000);
       });
     }
   });
