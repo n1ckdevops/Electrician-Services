@@ -5,7 +5,7 @@ import sendForm from "./modules/sendForm";
 import validation from "./modules/validation";
 import up from "./modules/up";
 import accordeon from "./modules/accordeon";
-import mask from "./modules/mask";
+// import mask from "./modules/mask";
 import corusel from "./modules/corusel";
 
 modal();
@@ -15,5 +15,5 @@ validation();
 up();
 accordeon();
 sendForm();
-mask();
+// mask();
 corusel();
