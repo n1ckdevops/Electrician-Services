@@ -10,6 +10,24 @@ const corusel = () => {
       prevEl: ".arrow-left",
       nextEl: ".arrow-right",
     },
+    breakpoints: {
+      300: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+    },
   });
 };
 export default corusel;
