@@ -13,7 +13,7 @@ const corusel = () => {
     breakpoints: {
       300: {
         slidesPerView: 1,
-        spaceBetween: 20,
+        spaceBetween: 0,
       },
       576: {
         slidesPerView: 2,
