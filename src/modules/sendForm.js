@@ -8,7 +8,7 @@ const sendForm = () => {
   const validateMinLength = (input, minLength) => {
     const value = input.value.trim();
     if (value.length < minLength) {
-      input.setCustomValidity(`Минимальная длина ${minLength} символа(ов)`);
+      input.setCustomValidity(`Минимальная длина ${minLength} символов`);
     } else {
       input.setCustomValidity("");
     }
