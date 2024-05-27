@@ -4,8 +4,15 @@ const sendForm = () => {
   const loadText = "Loading...";
   const errorText = "Error!";
   const successText = "Success!";
-  const modal = document.querySelector(".modal-callback");
-  const modalOverlay = document.querySelector(".modal-overlay");
+
+  const validateMinLength = (input, minLength) => {
+    const value = input.value.trim();
+    if (value.length < minLength) {
+      input.setCustomValidity(`Минимальная длина ${minLength} символа(ов)`);
+    } else {
+      input.setCustomValidity("");
+    }
+  };
 
   const sendData = (data) => {
     return fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -23,9 +30,9 @@ const sendForm = () => {
     const valueInput = document.querySelector(".required");
     const formData = new FormData(form);
     const formBody = {};
-
-    if (valueInput.value === "") {
-      alert("Необходимо ввести номер телефона");
+    console.log(valueInput.value.length);
+    if (valueInput.value.length !== 18) {
+      validateMinLength(valueInput, 11);
     } else {
       statusBlock.textContent = loadText;
       form.append(statusBlock);
