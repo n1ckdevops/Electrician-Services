@@ -2,13 +2,10 @@ const sendForm = () => {
   const form = document.querySelector("[name='form-callback']");
   const statusBlock = document.createElement("div");
   const loadText = "Loading...";
-  const errorText = "Error!";
+
   const successText = "Success!";
   const valueInputs = document.querySelectorAll(".required");
 
-  // valueInputs.addEventListener("input", () => {
-  //   console.log(valueInputs.value.length);
-  // });
   const validateMinLength = (input, minLength) => {
     const value = input.value.trim();
     if (value.length < minLength) {
@@ -41,9 +38,7 @@ const sendForm = () => {
         validateMinLength(e.target, 11);
       });
     });
-    // if (valueInputs.value.length === "") {
-    // validateMinLength(valueInputs, 11);
-    // } else {
+
     statusBlock.textContent = loadText;
     form.append(statusBlock);
 
@@ -60,7 +55,6 @@ const sendForm = () => {
         statusBlock.remove();
       }, 2000);
     });
-    // }
   });
 };
 
